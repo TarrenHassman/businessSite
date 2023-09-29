@@ -1,39 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Rendezvous Travel</title>
-		<style>
 
-        body {
-            margin: 0;
-            overflow: hidden;
-						-webkit-font-smoothing: antialiased;
-        }
-        #container {
-            position: relative;
-        }
-        #overlay {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            padding: 10px;
-						z-index: 10;
-        }
-				#overlay h1 {
-					background-color: rgba(91,72,128, 0.7);
-				}
-		</style>
-	</head>
-	<body>
-		<div id="overlay">
-			<h1>Rendezvous Travel</h1>
-			<span></span>
-			<img src="./img/screenshot.png" alt="Rendezvous Screenshot" width="200" height="400">
-			<!-- Add other HTML content here -->
+<head>
+	<meta charset="utf-8">
+	<title>Rendezvous Travel</title>
+	<link href='https://fonts.googleapis.com/css?family=Permanent Marker' rel='stylesheet'>
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		#container {
+			position: relative;
+		}
+
+		#overlay {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			padding: 10px;
+			z-index: 10;
+		}
+
+		#overlay h1 {
+			background-color: rgba(91, 72, 128, 0.7);
+		}
+
+		h1 {
+			font-family: 'Permanent Marker';
+			color: "transparent";
+      translate: "0em 1.45em";
+      font-size: 72; 
+			background: #966c39;
+			background: -webkit-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+			background: -moz-radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+			background: radial-gradient(ellipse farthest-corner at top right, #DEBB87 0%, #966c39 100%);
+			-webkit-background-clip: text;
+			background-clip: text;
+			filter: drop-shadow(3px 3px 8px #4B365F) drop-shadow(2px 2px 5px #84309c);
+			 -webkit-text-fill-color: transparent; 
+		}
+	</style>
+	
+</head>
+
+<body>
+	<div id="overlay">
+		<h1>Rendezvous Travel</h1>
+		<span></span>
+		<img src="./img/screenshot.png" alt="Rendezvous Screenshot" width="200" height="400">
+		<!-- Add other HTML content here -->
 	</div>
-			<canvas id="container"/>
-		<script src="https://cdn.tailwindcss.com"></script>
-		<script type="module" src="/main.js"></script>
-	</body>
+	<canvas id="container" />
+	<script type="module" src="/main.js"></script>
+</body>
+
 </html>
