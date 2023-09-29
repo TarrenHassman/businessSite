@@ -18714,9 +18714,9 @@ var starMaterial = new PointsMaterial({
   size: 0.1
 });
 var starVertices = [];
-for (let i = 0;i < 1e4; i++) {
-  const x = MathUtils.randFloatSpread(1000);
-  const y = MathUtils.randFloatSpread(1000);
+for (let i = 0;i < 3e4; i++) {
+  const x = MathUtils.randFloatSpread(2000);
+  const y = MathUtils.randFloatSpread(2000);
   const z = -Math.random() * 3000;
   starVertices.push(x, y, z);
 }
