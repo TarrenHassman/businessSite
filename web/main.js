@@ -18649,13 +18649,17 @@ if (typeof window !== "undefined") {
     window.__THREE__ = REVISION;
   }
 }
+var dir = new Vector3(1, 0, 0);
+var axis = new Vector3( 0, 0, 1 );
+var deg = 66.5;
+var angle = deg * (Math.PI / 180);
+dir.applyAxisAngle( axis, angle); 
 
 // main.js
 var animate = function() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  sphereGeometry.rotation.y += .001;
-  sphereGeometry.rotation.x += ((23*Math.PI)/180) * .001
+  sphereGeometry.rotateOnAxis(dir, .01);
 };
 var scene = new Scene;
 var camera = new PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
@@ -18726,4 +18730,5 @@ scene.add(stars);
 sphereGeometry.rotateZ(-(23*Math.PI)/180);
 camera.position.z = 15;
 camera.position.x = -5;
+
 animate();
