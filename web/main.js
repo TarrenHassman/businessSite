@@ -18654,8 +18654,8 @@ if (typeof window !== "undefined") {
 var animate = function() {
   requestAnimationFrame(animate);
   renderer.render(scene, camera);
-  sphereGeometry.rotation.y += 0.01;
-  sphereGeometry.rotation.x += 0.000022;
+  sphereGeometry.rotation.y += .001;
+  sphereGeometry.rotation.x += ((23*Math.PI)/180) * .001
 };
 var scene = new Scene;
 var camera = new PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1000);
@@ -18723,7 +18723,7 @@ for (let i = 0;i < 3e4; i++) {
 starGeometry.setAttribute("position", new Float32BufferAttribute(starVertices, 3));
 var stars = new Points(starGeometry, starMaterial);
 scene.add(stars);
-sphereGeometry.rotation.z += -0.23;
+sphereGeometry.rotateZ(-(23*Math.PI)/180);
 camera.position.z = 15;
 camera.position.x = -5;
 animate();
